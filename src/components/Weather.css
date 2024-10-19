@@ -45,7 +45,7 @@
 .search-bar {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 1px;
 }
 .search-bar input {
   height: 50px;
@@ -59,7 +59,7 @@
   font-size: 20px;
 }
 .search-bar img {
-  width: 50px;
+  width: 20px;
   background: white;
   border-radius: 50%;
   padding: 15px;
