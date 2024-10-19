@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app{
+  min-height: 100vh;
+  display: grid;
+  /* background: rgb(166, 133, 133) ; */
+  background-image: linear-gradient(80deg, #9eb16a , #502c2c, #583a51 );
+
+}
