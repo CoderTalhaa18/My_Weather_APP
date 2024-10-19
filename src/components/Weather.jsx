@@ -47,7 +47,9 @@ function Weather() {
             
 
           
-          const data = await(await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`)).json()
+          const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`);
+
+          const data = await response.json()
           
           
             
