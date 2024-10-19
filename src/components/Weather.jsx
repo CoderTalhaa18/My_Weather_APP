@@ -44,12 +44,9 @@ function Weather() {
       }
 
         try {
-            
-
-          
           const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`);
 
-          const data = await response;
+          
           
           
             
@@ -58,15 +55,15 @@ function Weather() {
             //   return;
             // }
             
-            console.log(data);
+            console.log(response.data);
 
-            const icon = allIcons[data.weather[0].icon]||clear;
+            const icon = allIcons[response.data.weather[0].icon]||clear;
 
             setWeatherData({
-                humidity : data.main.humidity,
-                wind : data.wind.speed,
-                temperature : Math.floor(data.main.temp),
-                location : data.name,
+                humidity : response.data.main.humidity,
+                wind : response.data.wind.speed,
+                temperature : Math.floor(response.data.main.temp),
+                location : response.data.name,
                 icon : icon
             });
         // eslint-disable-next-line no-unused-vars
