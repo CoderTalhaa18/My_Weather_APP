@@ -8,6 +8,7 @@ import humidity from "../assets/humidity.png";
 import rain from "../assets/rain.png";
 import snow from "../assets/snow.png";
 import wind from "../assets/wind.png";
+import axios from "axios";
 
 function Weather() {
 
@@ -43,10 +44,12 @@ function Weather() {
       }
 
         try {
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
-
-            const data = await (await fetch(url)).json();
             
+
+          
+          const axios_url = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`)
+          
+          const data = await (await fetch(axios_url)).json();
             
             // if(!response.ok){
             //   alert(data.message);
