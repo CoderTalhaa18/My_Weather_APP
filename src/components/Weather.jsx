@@ -11,6 +11,7 @@ import wind from "../assets/wind.png";
 import axios from "axios";
 
 function Weather() {
+  
   const [weatherData, setWeatherData] = useState(0);
 
   const inputRef = useRef();

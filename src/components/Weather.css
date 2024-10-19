@@ -23,7 +23,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-animation: bg-spin 3s linear infinite;
-  animation: bg-spin 3s linear infinite;
+  animation: bg-spin 3s linear linear;
 }
 @-webkit-keyframes bg-spin {
   to {
