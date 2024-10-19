@@ -74,7 +74,7 @@ function Weather() {
 
 
   useEffect(()=>{
-    searchh("London");
+    searchh("Ankara");
   },[])
 
   return (
